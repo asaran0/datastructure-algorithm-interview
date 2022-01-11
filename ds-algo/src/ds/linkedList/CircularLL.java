@@ -43,6 +43,22 @@ public class CircularLL {
         System.out.println("head");
     }
 
+    /*
+    * https://www.geeksforgeeks.org/split-a-circular-linked-list-into-two-halves/
+    * Split a Circular Linked List into two halves
+    * */
+//    public Pair<CNode, CNode> get2HalfCll() {
+//        CNode first = head, second = null;
+//        CNode fast, slow;
+//        fast = slow = head;
+//        while (fast != null) {
+//            if (fast.next == null) break;
+//            fast = fast.next.next;
+//            slow = slow.next;
+//        }
+//        return new Pair<CNode, CNode>(first, second);
+//    }
+
     public static void main(String arv[]) {
         CircularLL cll = getLinkedList();
         cll.print(cll.head);

@@ -1,0 +1,11 @@
+Design vending machine:
+
+Which have given properties:
+0. Display the list of items, list of money machine takes.
+0.1. Option to select the item then putting money onto it.
+1. Accepts money in form of 5, 10, 20, 50, 100rs.
+2. Products having amounts like Coke(25), Pepsi(35), Soda(45), Chips(10), Snacks(5)
+3. Giving the selected item and returning the change if there.
+if money is less warn and request for more money.
+
+4.On cancel returning the money and not giving any thing.

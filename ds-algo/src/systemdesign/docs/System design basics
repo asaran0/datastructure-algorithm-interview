@@ -1,0 +1,78 @@
+What is system design?
+
+System design is the process of defining the components, API, Database tables, flow of data, etc for a system
+to satisfy functional and non functional requirements in efficient manner.
+-> Combination of system and design.
+->System -> Assembly of different components for specified requirements.
+->Design -> how efficient managing and assembling the components.
+
+-> So when we are going to design a large system like uber, fb, instagram, whatsapp, youtube,
+First we write down the requirements.
+
+1. Functional requirements.
+2. Non Functional requirements.
+
+1. Functional Requirements.-> If we take an example of instagram, The functional requirements are like-
+
+-> Upload image, like, share, comments etc.
+
+For youtube -> Upload video, edit video, view video, search video, like video, comment, subscribe channel etc.
+
+2. Non Functional Requirements. ->
+
+Instagram ->
+-> Any image uploaded by user should not be lost.
+-> There should be no down time for the system.
+-> System should be scalable to millions of users and billions of images.
+
+
+-> System design is all about balancing the things,
+We should find out and decide what is important, what is not important.
+Ex. For instagram
+1. Fast loading of image is very important. availability is very imp.
+-> the no of comments in image may not b so important. for different server machines it can b different.
+so consistency is not so important.
+So all the servers will sync gradually, and the count will update in some time. that is acceptable.
+
+Why we need system design ?
+A good designed system will have the following properties:
+
+1. Easily Scalable -> Design a system in such a way if we need to add one more server or remove it should be very easy
+and after adding or removing the system should be consistent and no effect in performance.
+
+2. No Downtime -> System should be up all time even if some hardware fails, or db error,
+Some request come so that should give response.
+
+3. Low Latency -> The response time for any api call should be very small, very quick response for a request.
+
+4. Multiple Copies -> There should be multiple copies of servers, dbs, loadbalancers etc so that if some one fails it
+can be replaced very easily and thus there will be very less or no downtime.
+
+5.  Data consistency -> Data should be consistent in all the machines, dbs, servers, so that the user can get same
+response even if it got from other server or machine.
+
+6. Even Load distribution (Load balancing) -> the load of requests should be evenly distributed to all the servers.
+
+7. Reusability -> The code, design, api, db etc all should be reusable, we can easily update or add any new functionality.
+
+8. Work together -> All the components should work together as a system efficiently.
+
+Work efficiently -> Each component should work efficiently.
+
+Required concepts->
+---------- Computer networks, Distributed systems, Parallel computing  -------------
+We need to following-
+Estimation of system.
+Database design
+Api design
+Storage system design
+Caching
+Sharding
+Load balancing
+
+etc.
+
+
+
+
+

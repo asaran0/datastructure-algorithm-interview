@@ -1,0 +1,10 @@
+
+Chess Requirement Analysis:
+1. 2 players ( black, white)
+2. Should have the international rules to follow.
+3. White will move first, then alternative. ( Add timer to monitor time for the move.)
+4. Save the track of old moves.
+5. Undo is not allowed for now (We can have option later)
+6.assign randomly white to one.
+7. Can won by check mate, draw, or surrender.
+

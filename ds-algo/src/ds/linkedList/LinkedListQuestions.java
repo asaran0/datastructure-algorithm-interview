@@ -1,20 +1,9 @@
 package ds.linkedList;
 
-import javafx.util.Pair;
+//import javafx.util.Pair;
 
 public class LinkedListQuestions extends LinkedList {
-    public static void main(String argv[]) {
-        LinkedListQuestions ll = getDummyLinkedList();
 
-        ll.print();
-        System.out.println(ll.lengthOfLl(ll.head));
-        System.out.println(ll.lengthOfLlRec(ll.head));
-
-//        ll.deleteKeyAtPosition(2);
-//        ll.deleteKeyAtPosition(0);
-//        ll.deleteKeyAtPosition(2);
-//        ll.print();
-    }
 
     private static LinkedListQuestions getDummyLinkedList() {
         LinkedListQuestions ll = new LinkedListQuestions();
@@ -95,5 +84,69 @@ public class LinkedListQuestions extends LinkedList {
         }
         if (n == 1) return node.data;
         return getNthRec(node.next, n-1);
+    }
+
+
+    /*
+    * https://www.geeksforgeeks.org/write-a-c-function-to-print-the-middle-of-the-linked-list/
+    * Test Cases:
+    * null -> null, null
+    * 1 -> 1, null
+    * 1, 2 -> 1, 2
+    * 1, 2, 3 -> 1 2, 3
+    * */
+//    public Pair<LNode, LNode> getHalfLls(LNode node) {
+//        LNode first = node, second = null;
+//        LNode fast = node, slow = node;
+//
+//        while (fast !=null && fast.next != null) {
+//            fast = fast.next.next;
+//            slow = slow.next;
+//        }
+//        if (slow != null) {
+//            second = slow.next;
+//            slow.next = null;
+//        }
+//
+//        return new Pair<>(first, second);
+//    }
+
+    public void nthNodeFromEnd(LNode node, int n) {
+        LNode temp = node;
+        LNode nthNode = null;
+        int index = 1;
+        if (n <= 0) {
+            System.out.println("Enter n greater than 0");
+            return;
+        }
+        while (temp != null) {
+            if (n == index) {
+                nthNode = node;
+            } else if (index > n) {
+                nthNode = nthNode.next;
+            }
+            temp = temp.next;
+            index++;
+        }
+        if (nthNode == null) {
+            System.out.println("The list have less no than n.");
+        } else System.out.println("The "+ n+"th node from end is "+nthNode.data);
+    }
+
+    public static void main(String argv[]) {
+        LinkedListQuestions ll = getDummyLinkedList();
+
+        ll.print();
+        ll.nthNodeFromEnd(ll.head, 0);
+        ll.nthNodeFromEnd(ll.head, 1);
+        ll.nthNodeFromEnd(ll.head, 2);
+        ll.nthNodeFromEnd(ll.head, 3);
+        ll.nthNodeFromEnd(ll.head, 4);
+        ll.nthNodeFromEnd(ll.head, 10);
+
+//        ll.deleteKeyAtPosition(2);
+//        ll.deleteKeyAtPosition(0);
+//        ll.deleteKeyAtPosition(2);
+//        ll.print();
     }
 }
